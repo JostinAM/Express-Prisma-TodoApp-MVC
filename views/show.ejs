@@ -1,0 +1,15 @@
+<% layout('layouts/boilerplate') %>
+
+<h1><%=todo.title%></h1>
+
+<p><%=todo.description %></p>
+
+<p><%= todo.priority %></p>
+
+<p><%= todo.state %></p>
+
+<a class="btn btn-primary" href="/">Back</a>
+<a class="btn btn-warning" href="/<%= todo.id %>/edit">Edit</a>
+<form class="d-inline" action="/<%= todo.id %>?_method=DELETE" method="post">
+    <button class="btn btn-danger">Delete</button>
+</form>
